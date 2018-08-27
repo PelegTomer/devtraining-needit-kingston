@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Work Flow Approvals" max_length="40" name="x_58872_needit_work_flow_approvals" type="collection">
+        <element label="First Approval" max_length="32" name="first_approval" reference="sys_user" type="reference"/>
+        <element label="Second Approval" max_length="32" name="second_approval" reference="sys_user" type="reference"/>
+        <element label="Third Approval" max_length="32" name="third_approval" reference="sys_user" type="reference"/>
+        <element choice="1" display="true" label="MyChoise" max_length="40" name="value" type="choice">
+            <choice>
+                <element label="Software" sequence="0" value="Software"/>
+                <element label="Hardware" sequence="1" value="Hardware"/>
+                <element label="General" sequence="2" value="General"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="third_approval"/>
+        </index>
+        <index name="index2">
+            <element name="first_approval"/>
+        </index>
+        <index name="index3">
+            <element name="second_approval"/>
+        </index>
+    </element>
+</database>
